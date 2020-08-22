@@ -11,7 +11,56 @@
     <title>API-CURL-Youtube</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
+        <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+                <h1 class="font-weight-light">Youtube API with CURL</h1>
+                    <!-- content -->
+                    <div class="row justify-content-center pt-4">
+                    <!-- youtube -->
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="profile1.png" width="200" class="rounded-circle img-thumbnail">
+                                </div>
+                                <div class="col-md-8">
+                                    <h5>Channel Name<h5>
+                                    <p>1234 Subscribers.</p>
+                                </div>
+                            </div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L1GdvM645RM" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="profile1.png" width="200" class="rounded-circle img-thumbnail">
+                                </div>
+                                <div class="col-md-8">
+                                    <h5>Channel Name<h5>
+                                    <p>1234 Subscribers.</p>
+                                </div>
+                            </div>
+                            <div class="row mt-3 pb-3">
+                                <div class="col">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L1GdvM645RM" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div style="height: 100px"></div>
+                <p class="lead mb-0">You've reached the end!</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
