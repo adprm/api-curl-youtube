@@ -21,6 +21,7 @@ $pewdiepieLatestVideo = $result['items'][0]['id']['videoId'];
 
 $result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCq-Fj5jknLsUf-MWSy4_brA&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA');
 
+$tseriesPic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 
 ?>
 
@@ -65,7 +66,7 @@ $result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,
                         <div class="col-md-5">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="profile1.png" width="200" class="rounded-circle img-thumbnail">
+                                    <img src="<?= $tseriesPic; ?>" width="200" class="rounded-circle img-thumbnail">
                                 </div>
                                 <div class="col-md-8">
                                     <h5>Channel Name<h5>
