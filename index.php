@@ -13,6 +13,7 @@ function get_Curl($url) {
 $result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC-lHJZR3Gqxm24_Vd_AJ5Yw&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA');
 
 $pewdiepiePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+$pewdiepieName = $result['items'][0]['snippet']['title'];
 
 ?>
 
@@ -42,7 +43,7 @@ $pewdiepiePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
                                     <img src="<?= $pewdiepiePic; ?>" width="200" class="rounded-circle img-thumbnail">
                                 </div>
                                 <div class="col-md-8">
-                                    <h5>Channel Name<h5>
+                                    <h5><?= $pewdiepieName; ?><h5>
                                     <p>1234 Subscribers.</p>
                                 </div>
                             </div>
