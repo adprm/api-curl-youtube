@@ -10,6 +10,10 @@ function get_Curl($url) {
     return json_decode($result, true);
 }
 
+$result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC-lHJZR3Gqxm24_Vd_AJ5Yw&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA');
+
+$pewdiepiePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+
 ?>
 
 <!doctype html>
@@ -35,7 +39,7 @@ function get_Curl($url) {
                         <div class="col-md-5">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="profile1.png" width="200" class="rounded-circle img-thumbnail">
+                                    <img src="<?= $pewdiepiePic; ?>" width="200" class="rounded-circle img-thumbnail">
                                 </div>
                                 <div class="col-md-8">
                                     <h5>Channel Name<h5>
