@@ -14,6 +14,7 @@ $result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,
 
 $pewdiepiePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $pewdiepieName = $result['items'][0]['snippet']['title'];
+$pewdiepieSubscriber = $result['items'][0]['statistics']['subscriberCount'];
 
 ?>
 
@@ -44,7 +45,7 @@ $pewdiepieName = $result['items'][0]['snippet']['title'];
                                 </div>
                                 <div class="col-md-8">
                                     <h5><?= $pewdiepieName; ?><h5>
-                                    <p>1234 Subscribers.</p>
+                                    <p><?= $pewdiepieSubscriber; ?> Subscribers.</p>
                                 </div>
                             </div>
                             <div class="row mt-3 pb-3">
