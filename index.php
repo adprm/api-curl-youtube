@@ -16,6 +16,12 @@ $pewdiepiePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $pewdiepieName = $result['items'][0]['snippet']['title'];
 $pewdiepieSubscriber = $result['items'][0]['statistics']['subscriberCount'];
 
+$result = get_Curl('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC-lHJZR3Gqxm24_Vd_AJ5Yw&maxResults=1&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA&order=date');
+$pewdiepieLatestVideo = $result['items'][0]['id']['videoId'];
+
+$result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCq-Fj5jknLsUf-MWSy4_brA&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA');
+
+
 ?>
 
 <!doctype html>
@@ -51,7 +57,7 @@ $pewdiepieSubscriber = $result['items'][0]['statistics']['subscriberCount'];
                             <div class="row mt-3 pb-3">
                                 <div class="col">
                                     <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L1GdvM645RM" allowfullscreen></iframe>
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $pewdiepieLatestVideo; ?>" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
