@@ -9,7 +9,7 @@ function get_Curl($url) {
 
     return json_decode($result, true);
 }
-
+// data pewdiepie
 $result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC-lHJZR3Gqxm24_Vd_AJ5Yw&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA');
 
 $pewdiepiePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
@@ -19,10 +19,15 @@ $pewdiepieSubscriber = $result['items'][0]['statistics']['subscriberCount'];
 $result = get_Curl('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC-lHJZR3Gqxm24_Vd_AJ5Yw&maxResults=1&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA&order=date');
 $pewdiepieLatestVideo = $result['items'][0]['id']['videoId'];
 
+// data t-series
 $result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCq-Fj5jknLsUf-MWSy4_brA&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA');
 
 $tseriesPic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $tseriesName = $result['items'][0]['snippet']['title'];
+$tseriesSubscriber = $result['items'][0]['statistics']['subscriberCount'];
+
+$result = get_Curl('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCq-Fj5jknLsUf-MWSy4_brA&maxResults=1&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA&order=date');
+$tseriesLatestVideo = $result['items'][0]['id']['videoId'];
 
 ?>
 
@@ -71,13 +76,13 @@ $tseriesName = $result['items'][0]['snippet']['title'];
                                 </div>
                                 <div class="col-md-8">
                                     <h5><?= $tseriesName; ?><h5>
-                                    <p>1234 Subscribers.</p>
+                                    <p><?= $tseriesSubscriber; ?> Subscribers.</p>
                                 </div>
                             </div>
                             <div class="row mt-3 pb-3">
                                 <div class="col">
                                     <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L1GdvM645RM" allowfullscreen></iframe>
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $tseriesLatestVideo; ?>" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +90,7 @@ $tseriesName = $result['items'][0]['snippet']['title'];
                     </div>
 
                 <div style="height: 100px"></div>
-                <p class="lead mb-0">You've reached the end!</p>
+                <p class="lead mb-0">https://adprm.github.io</p>
             </div>
         </div>
     </div>
