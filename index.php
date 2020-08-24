@@ -10,23 +10,23 @@ function get_Curl($url) {
     return json_decode($result, true);
 }
 // data pewdiepie
-$result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC-lHJZR3Gqxm24_Vd_AJ5Yw&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA');
+$result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UC-lHJZR3Gqxm24_Vd_AJ5Yw&key=AIzaSyAM-Mq61ckWY7EMaRw_7wrSe69d8w5qYwE');
 
 $pewdiepiePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $pewdiepieName = $result['items'][0]['snippet']['title'];
 $pewdiepieSubscriber = $result['items'][0]['statistics']['subscriberCount'];
 
-$result = get_Curl('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC-lHJZR3Gqxm24_Vd_AJ5Yw&maxResults=1&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA&order=date');
+$result = get_Curl('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC-lHJZR3Gqxm24_Vd_AJ5Yw&maxResults=1&key=AIzaSyAM-Mq61ckWY7EMaRw_7wrSe69d8w5qYwE&order=date');
 $pewdiepieLatestVideo = $result['items'][0]['id']['videoId'];
 
 // data t-series
-$result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCq-Fj5jknLsUf-MWSy4_brA&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA');
+$result = get_Curl('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCq-Fj5jknLsUf-MWSy4_brA&key=AIzaSyAM-Mq61ckWY7EMaRw_7wrSe69d8w5qYwE');
 
 $tseriesPic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $tseriesName = $result['items'][0]['snippet']['title'];
 $tseriesSubscriber = $result['items'][0]['statistics']['subscriberCount'];
 
-$result = get_Curl('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCq-Fj5jknLsUf-MWSy4_brA&maxResults=1&key=AIzaSyBGvMrA68EmULGGXoE0CkjbOkTpbOlUPWA&order=date');
+$result = get_Curl('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCq-Fj5jknLsUf-MWSy4_brA&maxResults=1&key=AIzaSyAM-Mq61ckWY7EMaRw_7wrSe69d8w5qYwE&order=date');
 $tseriesLatestVideo = $result['items'][0]['id']['videoId'];
 
 ?>
